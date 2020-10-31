@@ -2,15 +2,32 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Dovydas Vaičiukynas, Amir Barak, Dumdidldum</Authors>
+    <Description>This is a Monogame wrapper for the ImGui.NET Library. Monogame.ImGui lets you build graphical interfaces for your Monogame games / in-game tools using a simple immediate-mode style.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/Dumdidldum/Monogame.ImGui.Standard</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Dumdidldum/Monogame.ImGui.Standard</PackageProjectUrl>
+    <PackageTags>imgui monogame imgui.net</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="ImGui.NET" Version="1.78.0" />
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1641" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
